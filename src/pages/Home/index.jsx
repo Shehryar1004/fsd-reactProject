@@ -1,4 +1,4 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ProgressBar, Badge, Accordion } from 'react-bootstrap';
 import { Carousel, Card } from '../../components';
 import styles from './styles.module.css';
 
@@ -44,6 +44,112 @@ const HomePage = () => {
                             btnText={'Learn More'}
                             img={Cardimg3}
                         />
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container>
+                <Row>
+                    <Col lg={'5'} className={'mt-5'}>
+                        <div className='d-flex align-items-center mt-2'>
+                            <p style={{margin: '0 50px 0 0'}}>HTML: </p> 
+                            <ProgressBar style={{flex: 1}} now={60} label={'60'}/>
+                        </div>
+
+                        <div className='d-flex align-items-center mt-2'>
+                            <p style={{margin: '0 63px 0 0'}}>CSS: </p> 
+                            <ProgressBar style={{flex: 1}} variant='warning' now={30} label={'30'}/>
+                        </div>
+
+                        <div className='d-flex align-items-center mt-2'>
+                            <p style={{margin: '0 21px 0 0'}}>JavaScript: </p> 
+                            <ProgressBar style={{flex: 1}} variant='danger' now={10} label={'10'}/>
+                        </div>
+                    </Col>
+
+                    <Col lg={'2'} />
+
+                    <Col lg={'5'}>
+                        <Row className={'mt-5'}>
+                            <Col xs={'6'}>
+                                <div className='d-flex flex-column align-items-center'>
+                                    Frontend <br />
+                                    <Badge>100</Badge>
+                                </div>
+                            </Col>
+                            <Col xs={'6'}>
+                                <div className='d-flex flex-column align-items-center'>
+                                    Backend <br />
+                                    <Badge bg={'secondary'}>75</Badge>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row className={'mt-5'}>
+                            <Col xs={'6'}>
+                                <div className='d-flex flex-column align-items-center'>
+                                    API <br />
+                                    <Badge bg={'warning'}>50</Badge>
+                                </div>
+                            </Col>
+                            <Col xs={'6'}>
+                                <div className='d-flex flex-column align-items-center'>
+                                    Database <br />
+                                    <Badge bg={'danger'}>25</Badge>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
+
+            <Container className={'mt-5'}> 
+                <Row>
+                    <Col lg={'5'}>
+                        <Accordion defaultActiveKey="0" alwaysOpen >
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Python</Accordion.Header>
+                                <Accordion.Body>
+                                Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability, making it easier for programmers to express concepts in fewer lines of code compared to other languages.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>C++</Accordion.Header>
+                                <Accordion.Body>
+                                    C++ is a low-level, compiled programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability, making it easier for programmers to express concepts in fewer lines of code compared to other languages.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>HTML</Accordion.Header>
+                                <Accordion.Body>
+                                    HTML is a markup language for web
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
+                    </Col>
+
+                    <Col lg={'2'}/>
+
+                    <Col lg={'5'}>
+                        <Accordion defaultActiveKey="0" alwaysOpen >
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>HTML</Accordion.Header>
+                                <Accordion.Body>
+                                    HTML is a markup language for web
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Python</Accordion.Header>
+                                <Accordion.Body>
+                                Python is a high-level, interpreted programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability, making it easier for programmers to express concepts in fewer lines of code compared to other languages.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>C++</Accordion.Header>
+                                <Accordion.Body>
+                                    C++ is a low-level, compiled programming language known for its simplicity, readability, and versatility. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability, making it easier for programmers to express concepts in fewer lines of code compared to other languages.
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        </Accordion>
                     </Col>
                 </Row>
             </Container>

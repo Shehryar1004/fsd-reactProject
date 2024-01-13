@@ -1,7 +1,7 @@
 import './App.css';
 import { HomePage, AboutPage, ContactPage, BlogPage, Error404Page} from './pages';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
-import { Navbar } from './components'
+import { Navbar, Footer } from './components'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
         <Route path='/blog' Component={BlogPage}/>
         <Route path='*' Component={Error404Page}/>
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
