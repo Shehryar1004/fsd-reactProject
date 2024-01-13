@@ -1,10 +1,12 @@
 import './App.css';
 import { HomePage, AboutPage, ContactPage, BlogPage, Error404Page} from './pages';
 import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import { Navbar } from './components'
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path='/' Component={HomePage}/>
         <Route path='/about' Component={AboutPage}/>
