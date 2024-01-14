@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import NavbarBootstrap from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'; 
 import Image from 'react-bootstrap/Image';
-import logo from '../../assets/logo.png'
+import logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
@@ -24,10 +24,10 @@ const Navbar = () => {
                 <NavbarBootstrap.Toggle aria-controls="basic-navbar-nav" />
                 <NavbarBootstrap.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/blog">Blog</Nav.Link>
-                    <Nav.Link href="/about">About Us</Nav.Link>
-                    <Nav.Link href="/contact">Contact Us</Nav.Link>
+                    <Nav.Link><Link to='/' style={{color: 'inherit', textDecoration: 'none'}}>Home</Link></Nav.Link>
+                    <Nav.Link><Link to='/blog' style={{color: 'inherit', textDecoration: 'none'}}>Blog</Link></Nav.Link>
+                    <Nav.Link><Link to='/about' style={{color: 'inherit', textDecoration: 'none'}}>About Us</Link></Nav.Link>
+                    <Nav.Link><Link to='/contact' style={{color: 'inherit', textDecoration: 'none'}}>Contact Us</Link></Nav.Link>
                 </Nav>
                 <Form inline>
                     <Row>
